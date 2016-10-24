@@ -37,6 +37,13 @@
 		B5D4FCBF1DBDF3D40032C908 /* UITableView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCB01DBDF3D40032C908 /* UITableView+Additions.m */; };
 		B5D4FCC01DBDF3D40032C908 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCB21DBDF3D40032C908 /* UIView+Additions.m */; };
 		B5D4FCC31DBDF5E30032C908 /* MyToos.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCC21DBDF5E30032C908 /* MyToos.m */; };
+		B5D4FCD01DBE0E1C0032C908 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCCF1DBE0E1C0032C908 /* HomeCell.m */; };
+		B5D4FCDD1DBE1CB30032C908 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCD61DBE1CB30032C908 /* UIView+Extension.m */; };
+		B5D4FCDE1DBE1CB30032C908 /* ZQLoadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCD81DBE1CB30032C908 /* ZQLoadImageView.m */; };
+		B5D4FCDF1DBE1CB30032C908 /* ZQLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCDA1DBE1CB30032C908 /* ZQLoopScrollView.m */; };
+		B5D4FCE01DBE1CB30032C908 /* ZQPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCDC1DBE1CB30032C908 /* ZQPageControl.m */; };
+		B5D4FCE21DBE1D1E0032C908 /* default_image.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D4FCE11DBE1D1E0032C908 /* default_image.png */; };
+		B5D4FCE51DBE229F0032C908 /* AdvertScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4FCE41DBE229F0032C908 /* AdvertScrollView.m */; };
 		CC3C2152BD4D7B5BB0473E25 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F17C10D71678E56E3FB187A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +91,8 @@
 		B5D4F8E31DBB700F0032C908 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		B5D4F8E51DBB7A7E0032C908 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
 		B5D4F8E61DBB7A7E0032C908 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
-		B5D4F8E81DBB7AA80032C908 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		B5D4F8E91DBB7AA80032C908 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		B5D4F8E81DBB7AA80032C908 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyViewController.h; path = Home/MyViewController.h; sourceTree = "<group>"; };
+		B5D4F8E91DBB7AA80032C908 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyViewController.m; path = Home/MyViewController.m; sourceTree = "<group>"; };
 		B5D4F8EB1DBDE2F20032C908 /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
 		B5D4F8EC1DBDE2F20032C908 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
 		B5D4F8F21DBDE45D0032C908 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -122,6 +129,19 @@
 		B5D4FCB21DBDF3D40032C908 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		B5D4FCC11DBDF5E30032C908 /* MyToos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyToos.h; path = library/MyToos.h; sourceTree = "<group>"; };
 		B5D4FCC21DBDF5E30032C908 /* MyToos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyToos.m; path = library/MyToos.m; sourceTree = "<group>"; };
+		B5D4FCCE1DBE0E1C0032C908 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		B5D4FCCF1DBE0E1C0032C908 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		B5D4FCD51DBE1CB30032C908 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B5D4FCD61DBE1CB30032C908 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		B5D4FCD71DBE1CB30032C908 /* ZQLoadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQLoadImageView.h; sourceTree = "<group>"; };
+		B5D4FCD81DBE1CB30032C908 /* ZQLoadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQLoadImageView.m; sourceTree = "<group>"; };
+		B5D4FCD91DBE1CB30032C908 /* ZQLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQLoopScrollView.h; sourceTree = "<group>"; };
+		B5D4FCDA1DBE1CB30032C908 /* ZQLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQLoopScrollView.m; sourceTree = "<group>"; };
+		B5D4FCDB1DBE1CB30032C908 /* ZQPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQPageControl.h; sourceTree = "<group>"; };
+		B5D4FCDC1DBE1CB30032C908 /* ZQPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQPageControl.m; sourceTree = "<group>"; };
+		B5D4FCE11DBE1D1E0032C908 /* default_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_image.png; path = ../Util/library/default_image.png; sourceTree = "<group>"; };
+		B5D4FCE31DBE229F0032C908 /* AdvertScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertScrollView.h; sourceTree = "<group>"; };
+		B5D4FCE41DBE229F0032C908 /* AdvertScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertScrollView.m; sourceTree = "<group>"; };
 		CAD6DB3B188E65CCCF3E331C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,31 +253,19 @@
 		B5D4F8D61DBB621F0032C908 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5D4F8D71DBB621F0032C908 /* Home */,
+				B5D4FCC41DBE0CC70032C908 /* Home */,
+				B5D4FCC51DBE0CD10032C908 /* Schedule */,
+				B5D4FCC61DBE0CE50032C908 /* Photo */,
+				B5D4FCC71DBE0D020032C908 /* Shop */,
+				B5D4FCC81DBE0D110032C908 /* My */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		B5D4F8D71DBB621F0032C908 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				B5D4F8D81DBB621F0032C908 /* HomeViewController.h */,
-				B5D4F8D91DBB621F0032C908 /* HomeViewController.m */,
-				B5D4F8DF1DBB6EF70032C908 /* ScheduleViewController.h */,
-				B5D4F8E01DBB6EF70032C908 /* ScheduleViewController.m */,
-				B5D4F8E21DBB700F0032C908 /* PhotoViewController.h */,
-				B5D4F8E31DBB700F0032C908 /* PhotoViewController.m */,
-				B5D4F8E51DBB7A7E0032C908 /* ShoppingViewController.h */,
-				B5D4F8E61DBB7A7E0032C908 /* ShoppingViewController.m */,
-				B5D4F8E81DBB7AA80032C908 /* MyViewController.h */,
-				B5D4F8E91DBB7AA80032C908 /* MyViewController.m */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		B5D4F8DA1DBB621F0032C908 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5D4FCE11DBE1D1E0032C908 /* default_image.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 		B5D4F8DC1DBB621F0032C908 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B5D4FCD41DBE1CB30032C908 /* ZQLoopScrollView */,
 				B5D4FC941DBDF3D40032C908 /* library */,
 				B5D4FCC11DBDF5E30032C908 /* MyToos.h */,
 				B5D4FCC21DBDF5E30032C908 /* MyToos.m */,
@@ -286,6 +295,11 @@
 		B5D4F8DD1DBB621F0032C908 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5D4FCC91DBE0DB80032C908 /* Home */,
+				B5D4FCCA1DBE0DCD0032C908 /* Schedule */,
+				B5D4FCCB1DBE0DD60032C908 /* Photo */,
+				B5D4FCCC1DBE0DDE0032C908 /* Shop */,
+				B5D4FCCD1DBE0DE40032C908 /* My */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +346,108 @@
 				B5D4FCA61DBDF3D40032C908 /* OpenUDID.m */,
 			);
 			path = support;
+			sourceTree = "<group>";
+		};
+		B5D4FCC41DBE0CC70032C908 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4F8D81DBB621F0032C908 /* HomeViewController.h */,
+				B5D4F8D91DBB621F0032C908 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5D4FCC51DBE0CD10032C908 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4F8DF1DBB6EF70032C908 /* ScheduleViewController.h */,
+				B5D4F8E01DBB6EF70032C908 /* ScheduleViewController.m */,
+			);
+			name = Schedule;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5D4FCC61DBE0CE50032C908 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4F8E21DBB700F0032C908 /* PhotoViewController.h */,
+				B5D4F8E31DBB700F0032C908 /* PhotoViewController.m */,
+			);
+			name = Photo;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5D4FCC71DBE0D020032C908 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4F8E51DBB7A7E0032C908 /* ShoppingViewController.h */,
+				B5D4F8E61DBB7A7E0032C908 /* ShoppingViewController.m */,
+			);
+			name = Shop;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5D4FCC81DBE0D110032C908 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4F8E81DBB7AA80032C908 /* MyViewController.h */,
+				B5D4F8E91DBB7AA80032C908 /* MyViewController.m */,
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
+		B5D4FCC91DBE0DB80032C908 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4FCCE1DBE0E1C0032C908 /* HomeCell.h */,
+				B5D4FCCF1DBE0E1C0032C908 /* HomeCell.m */,
+				B5D4FCE31DBE229F0032C908 /* AdvertScrollView.h */,
+				B5D4FCE41DBE229F0032C908 /* AdvertScrollView.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		B5D4FCCA1DBE0DCD0032C908 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		B5D4FCCB1DBE0DD60032C908 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		B5D4FCCC1DBE0DDE0032C908 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		B5D4FCCD1DBE0DE40032C908 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
+		B5D4FCD41DBE1CB30032C908 /* ZQLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4FCD51DBE1CB30032C908 /* UIView+Extension.h */,
+				B5D4FCD61DBE1CB30032C908 /* UIView+Extension.m */,
+				B5D4FCD71DBE1CB30032C908 /* ZQLoadImageView.h */,
+				B5D4FCD81DBE1CB30032C908 /* ZQLoadImageView.m */,
+				B5D4FCD91DBE1CB30032C908 /* ZQLoopScrollView.h */,
+				B5D4FCDA1DBE1CB30032C908 /* ZQLoopScrollView.m */,
+				B5D4FCDB1DBE1CB30032C908 /* ZQPageControl.h */,
+				B5D4FCDC1DBE1CB30032C908 /* ZQPageControl.m */,
+			);
+			path = ZQLoopScrollView;
 			sourceTree = "<group>";
 		};
 		E09AA7B961476165ABDFC0DB /* Frameworks */ = {
@@ -455,6 +571,7 @@
 				B5D4F8B31DBB61F60032C908 /* LaunchScreen.storyboard in Resources */,
 				B5D4F8B01DBB61F60032C908 /* Assets.xcassets in Resources */,
 				B5D4F8AE1DBB61F60032C908 /* Main.storyboard in Resources */,
+				B5D4FCE21DBE1D1E0032C908 /* default_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,16 +652,22 @@
 				B5D4FCBF1DBDF3D40032C908 /* UITableView+Additions.m in Sources */,
 				B5D4F8A81DBB61F60032C908 /* AppDelegate.m in Sources */,
 				B5D4FCC31DBDF5E30032C908 /* MyToos.m in Sources */,
+				B5D4FCE51DBE229F0032C908 /* AdvertScrollView.m in Sources */,
 				B5D4FCBC1DBDF3D40032C908 /* UIColor+Additions.m in Sources */,
 				B5D4FCB71DBDF3D40032C908 /* NSDictionary+Additions.m in Sources */,
 				B5D4F8EA1DBB7AA80032C908 /* MyViewController.m in Sources */,
 				B5D4F8E11DBB6EF70032C908 /* ScheduleViewController.m in Sources */,
 				B5D4F8E41DBB700F0032C908 /* PhotoViewController.m in Sources */,
+				B5D4FCE01DBE1CB30032C908 /* ZQPageControl.m in Sources */,
+				B5D4FCDE1DBE1CB30032C908 /* ZQLoadImageView.m in Sources */,
 				B5D4FCB41DBDF3D40032C908 /* AudioManager.m in Sources */,
 				B5D4F8A51DBB61F60032C908 /* main.m in Sources */,
 				B5D4FCB81DBDF3D40032C908 /* NSMutableArray+Additions.m in Sources */,
 				B5D4FCBD1DBDF3D40032C908 /* UIDevice+Additions.m in Sources */,
 				B5D4F8DE1DBB621F0032C908 /* HomeViewController.m in Sources */,
+				B5D4FCDD1DBE1CB30032C908 /* UIView+Extension.m in Sources */,
+				B5D4FCD01DBE0E1C0032C908 /* HomeCell.m in Sources */,
+				B5D4FCDF1DBE1CB30032C908 /* ZQLoopScrollView.m in Sources */,
 				B5D4FCBB1DBDF3D40032C908 /* UIApplication+Additions.m in Sources */,
 				B5D4F8E71DBB7A7E0032C908 /* ShoppingViewController.m in Sources */,
 				B5D4FCB61DBDF3D40032C908 /* NSData+Additions.m in Sources */,
