@@ -1,14 +1,14 @@
 //
-//  HomeCell.m
+//  MainMenuCell.m
 //  KeHai
 //
-//  Created by 三海 on 16/10/24.
+//  Created by 三海 on 16/10/25.
 //  Copyright © 2016年 陈高健. All rights reserved.
 //
 
-#import "HomeCell.h"
+#import "MainMenuCell.h"
 
-@implementation HomeCell
+@implementation MainMenuCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
