@@ -15,6 +15,7 @@
 #import "TodayCollectionViewCell.h"
 #import "SpeakHomeWorkFireCell.h"
 #import "SpeakHomeWorkPrivateOneToOneCell.h"
+#import "PictureModel.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -35,13 +36,48 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
+    [self createTableView];
+    // Do any additional setup after loading the view.
+}
+
+- (void)createTableView{
+    
     _listView = [[UITableView alloc]initWithFrame:CGRectMake(0, 1, SCREEN_WIDTH, SCREEN_HEIGHT - 49 - 1) style:UITableViewStylePlain];
     _listView.delegate = self;
     _listView.dataSource = self;
     _listView.separatorColor = [UIColor clearColor];
     [self.view addSubview:_listView];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     
-    // Do any additional setup after loading the view.
+    [super viewWillAppear:animated];
+    [self loadData];
+    [_listView reloadData];
+}
+
+- (void)loadData{
+    
+    // 网络请求
+    [[NetworkRequest sharedRequest] httpRequestWithApiCode:APICODE_523011 andDictParams:nil andSuccess:^(Response *response) {
+        NSDictionary *dict = response.data;
+        NSLog(@"%@",dict);
+        
+        NSMutableDictionary *homeDict = [NSMutableDictionary dictionary];
+        NSMutableArray *pictureArr = [NSMutableArray array];
+        
+        for (NSDictionary *dictPicture in dict[@"picture"]) {
+            
+            PictureModel *pictureModel = [[PictureModel alloc]initWithDic:dictPicture];
+//            [modelDict setObject:model forKey:@"picture"];
+            [pictureArr addObject:pictureModel];
+        }
+        [homeDict setObject:pictureArr forKey:@"picture"];
+        NSLog(@"%@",homeDict);
+        
+    } andFailure:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark UITableViewDelegate
@@ -342,6 +378,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     
+}
+
+#pragma mark SpeakHomeWorkFireClick
+
+- (void)fireCourseBtnClick:(UIButton *)sender{
+
+
 }
 
 #pragma mark MenuBtnClick

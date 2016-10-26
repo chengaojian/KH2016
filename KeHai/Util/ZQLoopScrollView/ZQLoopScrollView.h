@@ -36,7 +36,7 @@ typedef void (^ZQLoopScrollViewDidSelectItemBlock)(NSInteger atIndex,
 /**
  *  Call back method when an item was clicked at some time.
  *
- *  @param atIndex  The index of the clicked item in the loop scroll view
+ *  @param toIndex  The index of the clicked item in the loop scroll view
  */
 typedef void (^ZQLoopScrollViewDidScrollBlock)(NSInteger toIndex,
                                                ZQLoadImageView *sender);

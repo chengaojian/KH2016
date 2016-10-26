@@ -163,7 +163,7 @@ static AudioManager *sSharedInstance;
     }
     --currentIndex;
     if (currentIndex<0) {
-        currentIndex = playList.count-1;
+        currentIndex = (int)playList.count-1;
     }
     NSLog(@"pre play index:%d", currentIndex);
     [self playWithURL:[playList objectAtIndex:currentIndex]];

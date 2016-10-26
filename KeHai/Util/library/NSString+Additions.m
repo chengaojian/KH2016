@@ -41,7 +41,7 @@
 
 - (int) indexOf: (NSString*) substring {
     NSRange range = [self rangeOfString:substring];
-    return range.location == NSNotFound ? -1 : range.location;
+    return range.location == NSNotFound ? -1 : (int)range.location;
 }
 
 - (int) indexOf:(NSString *)substring startingFrom: (int) index {

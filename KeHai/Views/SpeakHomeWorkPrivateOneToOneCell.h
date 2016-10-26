@@ -21,6 +21,6 @@
 // 一对一价格
 @property (nonatomic, strong) UILabel *privateOneToOnePriceLab;
 
-- (void)configHomeCellWithHomeModel:(NSArray *)dataArr;
+//- (void)configHomeCellWithHomeModel:(NSArray *)dataArr;
 
 @end

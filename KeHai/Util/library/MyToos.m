@@ -9,6 +9,7 @@
 
 #import "MyToos.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "PreferenceFileUtil.h"
 @implementation MyToos
 
 #pragma mark - 颜色转换 IOS中十六进制的颜色转换为UIColor
@@ -51,5 +52,52 @@
     
     return colorWithRGB(250, 178, 49, 1);
 }
+
+- (NSString *)getUserId{
+    NSDictionary *dict = [self getFiledPathDict];
+    NSString *userid = @"";
+    userid = [dict objectForKey:@"userId"];
+    if ([userid isEqualToString:@""]){
+        userid = [dict objectForKey:@"touristsUserId"];
+    }
+    if([[[NSUserDefaults standardUserDefaults]objectForKey:@"login"] isEqualToString:@"login"]){
+        dict = [self getFiledPathDict];
+        if([dict objectForKey:@"userId"] == nil){
+            
+            dict = [self getAppPlistPath];
+            userid = [dict objectForKey:@"userId"];
+            if([dict objectForKey:@"userId"] == nil){
+                
+                userid = @"";
+            }
+            return userid;
+            
+        }
+        return userid;
+    }
+    if(userid == nil){
+        dict = [self getAppPlistPath];
+        userid = [dict objectForKey:@"userId"];
+        if([dict objectForKey:@"userId"] == nil){
+            
+            userid = @"";
+        }
+        return userid;
+        
+    }
+    return userid;
+}
+
+- (NSDictionary *)getAppPlistPath{
+    
+    return nil;
+}
+
+- (NSDictionary *)getFiledPathDict{
+    
+    NSDictionary *dict = [[PreferenceFileUtil shareInstance] getContentsOfUserInfo];
+    return dict;
+}
+
 
 @end

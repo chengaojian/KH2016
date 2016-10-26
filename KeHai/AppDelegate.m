@@ -13,6 +13,7 @@
 #import "ShoppingViewController.h"
 #import "MyViewController.h"
 #import "TabBar.h"
+#import "ComRequest.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +50,10 @@
         UIViewController *vc = _vcArr[i];
         vc.title = _titleArr[i];
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+        nav.navigationBar.barTintColor = [UIColor colorWithRed:250/255.0 green:178/255.0 blue:49/255.0 alpha:1];
+        nav.navigationBar.tintColor = [UIColor whiteColor];
+        nav.navigationBar.titleTextAttributes =
+        @{ NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName : [UIFont boldSystemFontOfSize:22] };
         [_viewCtrs addObject:nav];
     }
     
@@ -86,11 +91,49 @@
     [self.window makeKeyAndVisible];
 }
 
+// 请求主接口
+- (void)comRequest{
+    
+    NSString *appCode = APPCODE;
+    NSString *comURL = com_url;
+    ComRequest *req = [ComRequest shareInstanceWithUrl:comURL andAppId:appCode];
+    [req httpComSessionRequestPostSuccess:^(Response *response) {
+        [self setRootVC];
+        NSDictionary *dict = response.data;
+        NSLog(@"%@",dict);
+    } failed:^(NSError *error) {
+        
+    }];
+    
+    
+    
+    
+//    ComRequest *req = [ComRequest shareInstanceWithUrl:comURL andAppId:appCode];
+//    [req httpComSessionRequestPostSuccess:^(SHResponse *response){
+////        isRequestComSuccess = YES;//  请求成功
+//     
+//        if (!isFirstStart) {
+//            myWindow.rootViewController = [SHMainTabBarController sharedTabBar];
+//        }else {
+//            [self fisrtGuid];
+//        }
+//    }failed:^(NSError *error) {
+//        [[DMCAlertCenter defaultCenter] postAlertWithMessage:@"请检查网络"];
+//        if (!isFirstStart) {
+//            NewLoginViewController *new=[[NewLoginViewController alloc]init];
+//            new.isRootVC = YES;
+//            UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:new];
+//            myWindow.rootViewController = new;
+//        }else {
+//            [self fisrtGuid];
+//        }
+//    }];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self setRootVC];
+    [self comRequest];
     return YES;
 }
 

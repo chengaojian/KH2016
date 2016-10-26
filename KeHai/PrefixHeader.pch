@@ -9,6 +9,12 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+// 选择网络类型
+#define APPCODE @"stu_release"  //外网正式
+
+// 主接口
+#define com_url @"http://m.kehai.com/m/com_v2.do";     //主接口地址
+
 // 当前屏幕宽度
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 // 当前屏幕高度
@@ -21,8 +27,11 @@
 // [UIColor colorWithRed:81/255.0 green:81/255.0 blue:81/255.0 alpha:1];  大标题字体颜色
 // [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1]; 标题字体颜色
 // [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]; 副标题字体颜色
+// [UIColor colorWithRed:250/255.0 green:178/255.0 blue:49/255.0 alpha:1]; 导航栏背景颜色
 
 #import "AdditionsMacro.h"
 #import "MyToos.h"
+#import "NetworkRequest.h"
+#import "SHApiCode.h"
 
 #endif /* PrefixHeader_pch */

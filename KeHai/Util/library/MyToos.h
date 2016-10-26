@@ -18,5 +18,7 @@
 + (UIColor *)colorWithHexString: (NSString *)color;
 #pragma mark- 获取导航栏颜色
 + (UIColor *)getThemeColor;
+//
+- (NSString *)getUserId;
 
 @end
