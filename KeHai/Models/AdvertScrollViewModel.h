@@ -10,4 +10,13 @@
 
 @interface AdvertScrollViewModel : BaseModel
 
+// 图片地址
+@property (nonatomic, copy) NSString *picUrl;
+// 图片类型
+@property (nonatomic, copy) NSString *picType;
+// 图片描述
+@property (nonatomic, copy) NSString *picDec;
+// 图片Id
+@property (nonatomic, copy) NSString *picId;
+
 @end

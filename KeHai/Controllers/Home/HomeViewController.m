@@ -25,6 +25,8 @@
 @property (nonatomic, copy) UITableView *listView;
 // CollectionView
 @property (nonatomic, copy) UICollectionView *speakHomeWorkCollectionView;
+// 轮播图资源
+@property (nonatomic, copy) NSMutableArray *pictureArr;
 
 @end
 
@@ -33,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _dataArr = [NSMutableArray array];
+    _pictureArr = [NSMutableArray array];
     self.view.backgroundColor = [UIColor whiteColor];
     
     
@@ -64,16 +67,17 @@
         NSLog(@"%@",dict);
         
         NSMutableDictionary *homeDict = [NSMutableDictionary dictionary];
-        NSMutableArray *pictureArr = [NSMutableArray array];
         
         for (NSDictionary *dictPicture in dict[@"picture"]) {
             
             PictureModel *pictureModel = [[PictureModel alloc]initWithDic:dictPicture];
-//            [modelDict setObject:model forKey:@"picture"];
-            [pictureArr addObject:pictureModel];
+            [_pictureArr addObject:pictureModel];
         }
-        [homeDict setObject:pictureArr forKey:@"picture"];
-        NSLog(@"%@",homeDict);
+        [homeDict setObject:_pictureArr forKey:@"picture"];
+        NSLog(@"%@",homeDict[@"picture"]);
+        
+        // 刷新数据
+        [_listView reloadData];
         
     } andFailure:^(NSError *error) {
         
@@ -102,6 +106,10 @@
         AdvertScrollView *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
         if (cell == nil) {
             cell = [[AdvertScrollView alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
+        }
+        if (_pictureArr.count > 0){
+            
+            [cell configWithAdvertScrollViewArr:_pictureArr];
         }
         cell.backgroundColor = [UIColor redColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

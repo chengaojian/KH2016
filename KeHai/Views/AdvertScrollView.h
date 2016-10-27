@@ -10,4 +10,6 @@
 
 @interface AdvertScrollView : UITableViewCell
 
+- (void)configWithAdvertScrollViewArr:(NSArray *)pictureArr;
+
 @end

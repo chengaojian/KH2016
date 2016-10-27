@@ -8,6 +8,7 @@
 
 #import "advertScrollView.h"
 #import "ZQLoopScrollView.h"
+#import "AdvertScrollViewModel.h"
 
 @implementation AdvertScrollView
 
@@ -22,10 +23,24 @@
 
 - (void)createUI{
     
+//    NSMutableArray *images = [NSMutableArray array];
+//    ZQLoopScrollView *loop = [ZQLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200) imageUrls:images timeInterval:5.0 didSelect:^(NSInteger atIndex, ZQLoadImageView *sender) {
+//    } didScroll:^(NSInteger toIndex, ZQLoadImageView *sender) {
+//    }];
+//    loop.placeholder = [UIImage imageNamed:@"default_image.png"];
+//    [loop setCurrentPageIndicatorTintColor:[UIColor colorWithRed:51.0/255 green:204.0/255 blue:204.0/255 alpha:1]];
+//    [loop setPageControlTintColor:[UIColor greenColor]];
+//    [self addSubview:loop];
+}
+
+- (void)configWithAdvertScrollViewArr:(NSArray *)pictureArr{
+    
     NSMutableArray *images = [NSMutableArray array];
-    [images addObject:@"http://192.168.1.214:9702/file/loadImage/541311286.r"];
-    [images addObject:@"http://192.168.1.214:9702/file/loadImage/541311287.r"];
-    [images addObject:@"http://192.168.1.214:9702/file/loadImage/541311288.r"];
+    for (int i = 0 ; i< pictureArr.count; i++) {
+        AdvertScrollViewModel *model = pictureArr[i];
+        NSString *imageUrl = [NSString stringWithFormat:@"http://f.kehai.com/file/loadImage/%@.r",model.picId];
+        [images addObject:imageUrl];
+    }
     ZQLoopScrollView *loop = [ZQLoopScrollView loopScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200) imageUrls:images timeInterval:5.0 didSelect:^(NSInteger atIndex, ZQLoadImageView *sender) {
     } didScroll:^(NSInteger toIndex, ZQLoadImageView *sender) {
     }];
@@ -33,6 +48,7 @@
     [loop setCurrentPageIndicatorTintColor:[UIColor colorWithRed:51.0/255 green:204.0/255 blue:204.0/255 alpha:1]];
     [loop setPageControlTintColor:[UIColor greenColor]];
     [self addSubview:loop];
+
 }
 
 
